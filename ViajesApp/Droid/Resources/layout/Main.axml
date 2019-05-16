@@ -8,16 +8,18 @@
 		android:layout_height="wrap_content"
 		android:minWidth="25px"
 		android:minHeight="25px"
-		android:id="@+id/usuarioEditText" />
+		android:id="@+id/usuarioEditText"
+		android:hint="Nombre de usuario" />
 	<EditText
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/passwordEditText" />
+		android:id="@+id/passwordEditText"
+		android:hint="Contraseña" />
 	<Button
-		android:text="Button"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:id="@+id/inicioSesionButton" />
+		android:id="@+id/inicioSesionButton"
+		android:text="Iniciar Seccion" />
     
     
     
