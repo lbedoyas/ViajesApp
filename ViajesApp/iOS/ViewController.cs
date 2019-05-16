@@ -6,7 +6,7 @@ namespace ViajesApp.iOS
 {
     public partial class ViewController : UIViewController
     {
-        int count = 1;
+
 
         public ViewController(IntPtr handle) : base(handle)
         {
@@ -17,18 +17,27 @@ namespace ViajesApp.iOS
             base.ViewDidLoad();
 
             // Code to start the Xamarin Test Cloud Agent
-#if ENABLE_TEST_CLOUD
-			Xamarin.Calabash.Start ();
-#endif
+                #if ENABLE_TEST_CLOUD
+                			Xamarin.Calabash.Start ();
+                #endif
 
-            // Perform any additional setup after loading the view, typically from a nib.
-            Button.AccessibilityIdentifier = "myButton";
-            Button.TouchUpInside += delegate
-            {
-                var title = string.Format("{0} clicks!", count++);
-                Button.SetTitle(title, UIControlState.Normal);
-            };
+            inicioSesionButton.TouchUpInside += InicioSesionButton_TouchUpInside;
+
+
         }
+
+        void InicioSesionButton_TouchUpInside(object sender, EventArgs e)
+        {
+            if(string.IsNullOrEmpty(usuarioTextField.Text) || string.IsNullOrEmpty(passwordTextField.Text))
+            {
+
+            }
+            else
+            {
+                // hacer: agregar navegacion
+            }
+        }
+
 
         public override void DidReceiveMemoryWarning()
         {
