@@ -11,6 +11,7 @@ namespace ViajesApp.Clases
         {
             using(SQLite.SQLiteConnection conexion = new SQLite.SQLiteConnection(ruta_db))
             {
+
                 conexion.CreateTable<T>();
 
                 if(conexion.Insert(item)>0)
